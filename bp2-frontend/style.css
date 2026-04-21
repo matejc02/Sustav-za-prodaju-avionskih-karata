@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Glavni kontejner */
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Naslovi */
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: #0056b3;
+  }
+  
+  /* Forme */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Tablica */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Sekcije */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  #results-section, #reservation-section {
+    display: none; /* Skriva sekcije dok nisu potrebne */
+  }
+  
+  #reservation-section {
+    border-top: 2px solid #007bff;
+    padding-top: 20px;
+  }
+  
+  /* Mobilni uređaji */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    input, select, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    table th, table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }

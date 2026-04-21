@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervacija Letova</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rezervacija Letova</h1>
+   
+    <!-- Forma za pretragu letova -->
+    <section id="search-section">
+      <h2>Pretraži Letove</h2>
+      <form id="search-form">
+        <label for="departure">Polazište:</label>
+        <select id="departure" required>
+          <option value="ZAG">Zagreb (ZAG)</option>
+          <option value="BEG">Beograd (BEG)</option>
+          <option value="SPU">Split (SPU)</option>
+        </select>
+
+        <label for="destination">Odredište:</label>
+        <select id="destination" required>
+          <option value="CDG">Pariz (CDG)</option>
+          <option value="LHR">London (LHR)</option>
+          <option value="JFK">New York (JFK)</option>
+        </select>
+
+        <label for="date">Datum Polaska:</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Pretraži</button>
+      </form>
+    </section>
+
+    <!-- Rezultati pretrage -->
+    <section id="results-section" style="display: none;">
+      <h2>Rezultati Pretrage</h2>
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Broj Leta</th>
+            <th>Polazište</th>
+            <th>Odredište</th>
+            <th>Vrijeme Polaska</th>
+            <th>Vrijeme Dolaska</th>
+            <th>Cijena</th>
+            <th>Rezerviraj</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+   
+    <!-- Forma za unos rezervacije -->
+    <section id="reservation-section" style="display: none;">
+      <h2>Rezervacija</h2>
+      <form id="reservation-form">
+        <label for="selected-flight">Odabrani Let:</label>
+        <input type="text" id="selected-flight" readonly>
+
+        <label for="class">Klasa:</label>
+        <select id="class" required>
+          <option value="1">Ekonomska</option>
+          <option value="2">Poslovna</option>
+          <option value="3">Prva</option>
+        </select>
+
+        <button type="submit">Potvrdi Rezervaciju</button>
+      </form>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
